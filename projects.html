@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目展示 - Queenie Design</title>
+<link rel="stylesheet" href="init.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="mobile-menu">
+      <nav>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="projects.html">项目展示</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-container">
+      <div class="header-left">
+        <div class="logo">
+          <h1>Queenie<span>.Design</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav-desktop">
+        <ul>
+          <li><a href="index.html" class="active">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="projects.html">项目展示</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<main>
+<div class="pheader">
+  <h1>设计作品集</h1>
+  <p>探索我的创意设计解决方案和视觉表达</p>
+</div>
+
+    <!-- 精选作品展示 -->
+    <section class="featured-works">
+      <div class="section-container">
+        <div class="category-tabs">
+          <div class="categories-container">
+            <span class="category-btn active" data-category="a">全部</span>
+            <span class="category-btn" data-category="h">上海爱人如己健康管理</span>
+            <span class="category-btn" data-category="c">舒雅服饰公司</span>
+            <span class="category-btn" data-category="e">空白电子商务公司</span>
+            <span class="category-btn" data-category="i">兼职插画设计等</span>
+          </div>
+        </div>
+        <!-- 作品内容 -->
+        <div class="works-grid" id="works-grid"></div>
+      </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <h2>Queenie<span>.Design</span></h2>
+        <p>用设计讲述品牌故事，创造视觉冲击力</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-nav">
+          <h3>导航</h3>
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我</a></li>
+            <li><a href="projects.html">项目展示</a></li>
+            <li><a href="contact.html">联系方式</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h3>社交媒体</h3>
+          <div class="social-icons">
+            <a href="javascript:void(0)" class="child" target="_blank" aria-label="wechat"><i class="fab fa-weixin"></i></a>
+            <a href="https://www.zcool.com.cn/u/15820455" target="_blank" aria-label="Instagram"><img src="./img/zk.png" alt="zcool"></i></a>
+            <a href="https://huaban.com/user/q2e6m4je8vx" target="_blank" aria-label="LinkedIn"><img src="./img/hb.png" alt="huaban"></a>
+          </div>
+          <figure class="sibling"><img src="./img/QRcode.jpg" width="100%" alt="QRcode"></figure>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> Queenie Qi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// 移动菜单切换
+const menu = document.querySelector('.mobile-menu');
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});
+menu.addEventListener('click', function() {
+  menu.style.display = 'none'
+});
+
+  // 作品数据
+  document.addEventListener('DOMContentLoaded', function() {
+    const works = [
+      {
+        id: 1,
+        title: '企业健康科普宣传',
+        category: '视频剪辑',
+        type: 'h',
+        image: './img/c1.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTM4Njg=.html'
+      },
+      {
+        id: 2,
+        title: '企业产品视频',
+        category: '视频剪辑',
+        type: 'h',
+        image: './img/c2.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTM4MDQ=.html'
+      },
+      {
+        id: 3,
+        title: '进博会企业宣传视频',
+        category: '视频剪辑',
+        type: 'h',
+        image: './img/c3.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTM2NTY=.html'
+      },
+      {
+        id: 4,
+        title: '企业logo，画册',
+        category: '品牌VI设计',
+        type: 'h',
+        image: './img/c4.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTMzNzI=.html'
+      },
+      {
+        id: 5,
+        title: '产品宣传画册',
+        category: '平面设计',
+        type: 'h',
+        image: './img/c5.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI5ODA=.html'
+      },
+      {
+        id: 6,
+        title: '企业宣传',
+        category: '平面设计',
+        type: 'h',
+        image: './img/c6.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI4ODQ=.html'
+      },
+      {
+        id: 7,
+        title: '线上装修模块内容',
+        category: '小程序UI',
+        type: 'h',
+        image: './img/c7.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI0ODg=.html'
+      },
+      {
+        id: 8,
+        title: '舒雅服饰产品页',
+        category: '电商设计',
+        type: 'c',
+        image: './img/c8.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODY3ODA=.html'
+      },
+      {
+        id: 9,
+        title: '舒雅服饰产品页',
+        category: '电商设计',
+        type: 'c',
+        image: './img/c9.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODY5MDQ=.html'
+      },
+      {
+        id: 10,
+        title: '舒雅服饰重点品类',
+        category: '电商设计',
+        type: 'c',
+        image: './img/c10.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODY5OTI=.html'
+      },
+      {
+        id: 11,
+        title: '舒雅|艺录服饰视频',
+        category: '拍摄剪辑',
+        type: 'c',
+        image: './img/c11.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODcxNjQ=.html'
+      },
+      {
+        id: 12,
+        title: '空白公司展会活动',
+        category: '平面设计',
+        type: 'e',
+        image: './img/c12.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg2NTc1OTI=.html'
+      },
+      {
+        id: 13,
+        title: '空白公司展会活动',
+        category: '平面设计',
+        type: 'e',
+        image: './img/c13.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg2NTc1NDg=.html'
+      },
+      {
+        id: 14,
+        title: '空白公司线下店铺活动',
+        category: '布展设计',
+        type: 'e',
+        image: './img/c14.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNTQxNTgxNjA=.html'
+      },
+      {
+        id: 15,
+        title: '空白公司电商美妆',
+        category: '电商设计',
+        type: 'e',
+        image: './img/c15.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNTM5MTU5MDA=.html'
+      },
+      {
+        id: 16,
+        title: '空白公司电商服装',
+        category: '电商设计',
+        type: 'e',
+        image: './img/c16.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNTM5MTQ1MDQ=.html'
+      },
+      {
+        id: 17,
+        title: '国潮美妆电器',
+        category: '电商设计',
+        type: 'i',
+        image: './img/c17.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNTM5MTU1NDg=.html'
+      },
+      {
+        id: 18,
+        title: '插画',
+        category: '插画',
+        type: 'i',
+        image: './img/c18.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNDk3NjQ0MDA=.html'
+      },
+      {
+        id: 19,
+        title: '线上商城商品',
+        category: '电商设计',
+        type: 'h',
+        image: './img/c19.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI0MTY=.html'
+      }
+    ];
+
+    // 初始化渲染
+    renderWorks('a');
+
+    // 分类按钮点击事件
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        // 移除所有active类
+        document.querySelectorAll('.category-btn').forEach(b => {
+          b.classList.remove('active');
+        });
+        
+        // 给当前点击的按钮添加active类
+        this.classList.add('active');
+        
+        // 获取分类并渲染作品
+        const category = this.dataset.category;
+        renderWorks(category);
+      });
+    });
+
+    // 渲染作品函数
+    function renderWorks(category) {
+      // 修改为正确的 ID
+      const container = document.getElementById('works-grid');
+      let filteredWorks = works
+      
+      // 筛选作品
+      if (category !== 'a') {
+        filteredWorks = works.filter(work => work.type === category);
+      }
+      
+      // 生成HTML
+      let html = '';
+      filteredWorks.forEach(work => {
+        html += `
+          <div class="work-card">
+            <a href="${work.url}" target="_blank">
+              <div class="work-image">
+                <img src="${work.image}" alt="${work.title}">
+                <div class="work-overlay">
+                  <h3>${work.title}</h3>
+                  <p>${work.category}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        `;
+      });
+      
+      // 更新DOM
+      container.innerHTML = html;
+    }
+  });
+
+//尾部显示二维码
+const child = document.querySelector('.child');
+const sibling = document.querySelector('.sibling');
+child.addEventListener('mouseenter', () => {
+sibling.style.opacity = 1;
+});
+child.addEventListener('mouseleave', () => {
+sibling.style.opacity = 0;
+});
+</script>
+</body>
+</html>

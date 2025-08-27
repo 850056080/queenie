@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频剪辑 - Queenie Design</title>
+<link rel="stylesheet" href="init.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="mobile-menu">
+      <nav>
+        <ul>
+          <li><a href="video.html" class="active">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-container">
+      <div class="header-left">
+        <div class="logo">
+          <h1>Queenie<span>.Design</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav-desktop">
+        <ul>
+          <li><a href="video.html" class="active">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- 英雄区域 -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>视频剪辑作品</h1>
+        <h2>影像创作 & 后期制作</h2>
+        <p>用镜头语言讲述故事，创造动态视觉体验</p>
+      </div>
+    </section>
+
+    <!-- 精选作品展示 -->
+    <section class="featured-works">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>视频作品集</h2>
+          <p>探索我的视频剪辑与后期制作能力</p>
+        </div>
+        <div class="category-tabs">
+          <div class="categories-container">
+            <span class="category-btn active" data-category="a">全部</span>
+            <span class="category-btn" data-category="corporate">企业宣传</span>
+            <span class="category-btn" data-category="product">产品展示</span>
+            <span class="category-btn" data-category="commercial">商业广告</span>
+            <span class="category-btn" data-category="creative">创意短片</span>
+          </div>
+        </div>
+        <!-- 作品内容 -->
+        <div class="works-grid" id="works-grid"></div>
+      </div>
+    </section>
+
+    <!-- 视频服务 -->
+    <section class="design-services">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>视频服务</h2>
+          <p>为客户提供的专业视频制作解决方案</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3>企业宣传片</h3>
+            <p>企业形象宣传、产品介绍、品牌故事等视频制作</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>后期剪辑</h3>
+            <p>专业的视频剪辑、调色、特效制作和音频处理</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <h3>动画制作</h3>
+            <p>二维动画、Motion Graphics、片头片尾动画设计</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h2>Queenie<span>.Design</span></h2>
+          <p>用设计讲述品牌故事，创造视觉冲击力</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-nav">
+            <h3>导航</h3>
+            <ul>
+              <li><a href="video.html" class="active">首页</a></li>
+              <li><a href="about.html">关于我</a></li>
+              <li><a href="contact.html">联系方式</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-social">
+            <h3>社交媒体</h3>
+            <div class="social-icons">
+              <a href="javascript:void(0)" class="child" target="_blank" aria-label="wechat"><i class="fab fa-weixin"></i></a>
+              <a href="https://www.zcool.com.cn/u/15820455" target="_blank" aria-label="Instagram"><img src="./img/zk.png" alt="zcool"></i></a>
+              <a href="https://huaban.com/user/q2e6m4je8vx" target="_blank" aria-label="LinkedIn"><img src="./img/hb.png" alt="huaban"></a>
+            </div>
+            <figure class="sibling"><img src="./img/QRcode.jpg" width="100%" alt="QRcode"></figure>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Queenie Qi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  // 移动菜单切换
+  const menu = document.querySelector('.mobile-menu');
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  });
+  menu.addEventListener('click', function() {
+    menu.style.display = 'none'
+  });
+
+  // 视频作品数据
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoWorks = [
+      {
+        id: 1,
+        title: '企业品牌宣传片',
+        category: '企业宣传',
+        type: 'corporate',
+        image: './img/cc2.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTM4Njg=.html'
+      },
+      {
+        id: 2,
+        title: '产品功能介绍视频',
+        category: '产品展示',
+        type: 'product',
+        image: './img/cc3.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTM4MDQ=.html'
+      },
+      {
+        id: 3,
+        title: '公司年度回顾',
+        category: '企业宣传',
+        type: 'corporate',
+        image: './img/cc4.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTM2NTY=.html'
+      },
+      {
+        id: 4,
+        title: '服装品牌广告片',
+        category: '商业广告',
+        type: 'commercial',
+        image: './img/c11.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODcxNjQ=.html'
+      },
+      {
+        id: 5,
+        title: '健康科普动画',
+        category: '创意短片',
+        type: 'creative',
+        image: './img/cc1.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI0MTY=.html'
+      },
+      {
+        id: 6,
+        title: '产品使用教程',
+        category: '产品展示',
+        type: 'product',
+        image: './img/cc8.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI0ODg=.html'
+      },
+      {
+        id: 7,
+        title: '电商推广视频',
+        category: '商业广告',
+        type: 'commercial',
+        image: './img/c10.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODY5MDQ=.html'
+      },
+      {
+        id: 8,
+        title: '品牌故事短片',
+        category: '创意短片',
+        type: 'creative',
+        image: './img/c9.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNjg0ODY3ODA=.html'
+      },
+      {
+        id: 9,
+        title: '企业文化宣传',
+        category: '企业宣传',
+        type: 'corporate',
+        image: './img/cc6.jpg',
+        url: 'https://www.zcool.com.cn/work/ZNzE5MTI5ODA=.html'
+      }
+    ];
+
+    // 初始化渲染
+    renderVideoWorks('a');
+
+    // 分类按钮点击事件
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        // 移除所有active类
+        document.querySelectorAll('.category-btn').forEach(b => {
+          b.classList.remove('active');
+        });
+        
+        // 给当前点击的按钮添加active类
+        this.classList.add('active');
+        
+        // 获取分类并渲染作品
+        const category = this.dataset.category;
+        renderVideoWorks(category);
+      });
+    });
+
+    // 渲染视频作品函数
+    function renderVideoWorks(category) {
+      const container = document.getElementById('works-grid');
+      let filteredWorks = videoWorks;
+      
+      // 筛选作品
+      if (category !== 'a') {
+        filteredWorks = videoWorks.filter(work => work.type === category);
+      }
+      
+      // 生成HTML
+      let html = '';
+      filteredWorks.forEach(work => {
+        html += `
+          <div class="work-card">
+            <a href="${work.url}" target="_blank">
+              <div class="work-image">
+                <img src="${work.image}" alt="${work.title}">
+                <div class="work-overlay">
+                  <h3>${work.title}</h3>
+                  <p>${work.category}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        `;
+      });
+      
+      // 更新DOM
+      container.innerHTML = html;
+    }
+  });
+
+//尾部显示二维码
+const child = document.querySelector('.child');
+const sibling = document.querySelector('.sibling');
+child.addEventListener('mouseenter', () => {
+sibling.style.opacity = 1;
+});
+child.addEventListener('mouseleave', () => {
+sibling.style.opacity = 0;
+});
+</script>
+</html>
